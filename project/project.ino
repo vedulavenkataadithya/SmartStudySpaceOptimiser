@@ -18,6 +18,9 @@ int distance;
 int light_value;
 
 bool sitting = false;
+bool system_on = true;
+bool last_button_state = HIGH;
+
 unsigned long start_time = 0;
 
 void setup()
@@ -33,6 +36,22 @@ void setup()
 
 void loop()
 {
+  bool current_button_state = digitalRead(button_pin);
+
+  if (last_button_state == HIGH && current_button_state == LOW)
+  {
+    system_on = !system_on;
+    delay(200);
+  }
+
+  last_button_state = current_button_state;
+
+  if (!system_on)
+  {
+    digitalWrite(led_pin, LOW);
+    digitalWrite(buzzer_pin, LOW);
+    return;
+  }
 
   digitalWrite(trig_pin, LOW);
   delayMicroseconds(2);
@@ -83,22 +102,12 @@ void loop()
     digitalWrite(buzzer_pin, HIGH);
   }
 
-  if (digitalRead(button_pin) == LOW)
-  {
-    sitting = false;
-    start_time = 0;
-    digitalWrite(buzzer_pin, LOW);
-
-    Serial.println("button pressed - reset");
-    delay(300); 
-  }
-
   Serial.print("dist: ");
   Serial.print(distance);
   Serial.print(" light: ");
   Serial.print(light_value);
-  Serial.print(" btn: ");
-  Serial.println(digitalRead(button_pin));
+  Serial.print(" system: ");
+  Serial.println(system_on);
 
   delay(200);
 }
