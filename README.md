@@ -89,10 +89,30 @@ To create a **simple, affordable, and privacy-friendly solution** that promotes:
 
 ## 👥 Team Contributions
 
-- **Pranush** – Hardware design & system assembly  
-- **Bhargav** – Circuit connections & component analysis  
-- **Dheerun** – Software & hardware integration  
-- **Team Members** – Testing, documentation, and design  
+### 💻 Software Team
+- **Vedula Venkata Adithya**  
+  Worked on developing the core logic and algorithms of the system, including sensor data processing, threshold-based decision making, and implementation of time tracking using `millis()`.
+
+- **Himanshu**  
+  Contributed to writing, testing, and optimizing the Arduino code. Focused on ensuring accurate sensor readings and smooth execution of the program logic.
+
+---
+
+### 🔧 Hardware Team
+- **Bhargav**  
+  Responsible for circuit design and pin connections. Implemented and verified wiring between Arduino, sensors, and output components, and ensured stable hardware performance.
+
+- **Pranush**  
+  Worked on component selection, hardware assembly, and system setup. Assisted in testing the physical prototype and validating sensor placement and thresholds.
+
+---
+
+### 🔗 Integration Team
+- **Dheerun**  
+  Handled software-hardware integration by ensuring proper communication between sensors and code. Verified real-time system response and coordinated testing.
+
+- **Omkar**  
+  Assisted in integrating modules and debugging combined system behavior. Focused on ensuring all components worked together seamlessly in the final prototype.
 
 ---
 
