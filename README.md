@@ -83,7 +83,7 @@ To create a **simple, affordable, and privacy-friendly solution** that promotes:
 
 ## 📸 Demo
 
-*(Add your project image or video here)*
+*Videos of the product working can be found under the videos folder of this repository*
 
 ---
 
